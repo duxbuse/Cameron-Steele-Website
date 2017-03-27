@@ -25,38 +25,41 @@ html
 	body
 		header
 			nav(class="navbar navbar-default navbar-static-top")
-					div(class="col-sm-5")
-						a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer 
-							span(class="glyphicon glyphicon-music")
-						
-					div(class="container")
-						div(class="navbar-header")
-							button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
-								span(class="sr-only") Toggle Navigation
-								span(class="icon-bar")
-								span(class="icon-bar")
-								span(class="icon-bar")
-							
-						div(class="navbar-collapse collapse", id="navbar")
-								div(class="col-sm-5")
-									ul(class="nav navbar-nav")
-										li
-											a(href="/") Home
-										li
-											a(href="/") Bio
-										li
-											a(href="/") Music
-										li
-											a(href="/") Contact
+				div(class="container", id="navbar")
+					div(class="navbar-header")
+						button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+							span(class="sr-only") Toggle Navigation
+							span(class="icon-bar")
+							span(class="icon-bar")
+							span(class="icon-bar")
 
-								div(class="col-sm-2 social-media")
-									ul(class="nav navbar-nav navbar-right")
-										li
-											img(src="/images/twitter.png", class="img-thumbnail", alt="Twitter", href="#", width="30", height="30")
-										li
-											img(src="/images/facebook.png", class="img-thumbnail", alt="Facebook", href="#", width="30", height="30")
-										li
-											img(src="/images/youtube.png", class="img-thumbnail", alt="Youtube", href="#", width="30", height="30")
+						a(class="navbar-brand", href="/") Cameron Steele - Composer 
+							span(class="glyphicon glyphicon-music", aria-hidden="true")
+
+					div(class="navbar-collapse collapse", id="navbar")
+						div(class="row")
+							div(class="col-sm-4")
+								ul(class="nav navbar-nav")
+									li
+										a(href="/") Home
+									li
+										a(href="/") Bio
+									li
+										a(href="/") Music
+									li
+										a(href="/") Contact
+							
+							//spacer bar in the grid
+
+							div(class="col-sm-4")
+								ul(class="nav navbar-nav navbar-right")
+									li
+										img(src="/images/twitter.png", class="img-thumbnail", alt="Twitter", href="#", width="30", height="30")
+									li
+										img(src="/images/facebook.png", class="img-thumbnail", alt="Facebook", href="#", width="30", height="30")
+									li
+										img(src="/images/youtube.png", class="img-thumbnail", alt="Youtube", href="#", width="30", height="30")
+							
 
 							
 		//this section has the id="wrapper"
@@ -77,7 +80,7 @@ html
 				div(class="row")
 					div(class="col-sm-5 col-centered text-center")
 						p
-							span © 2013 Cameron Steele. Site by 
+							span © 2016 Cameron Steele. Site by 
 							a(href="") Duxbury Digital
 
 	//Bootstrap javascript and jquery, added at the end to improve load times				
