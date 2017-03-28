@@ -1,0 +1,25 @@
+body {
+  background: #444 url("../images/bg.jpg") repeat 0 0 scroll;
+  color: #9d9d9d;
+}
+#wrapper {
+  float: none;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+#navbar .social-media {
+  padding: 10px;
+}
+#navbar .social-media li {
+  margin: 0 5px 0 5px;
+}
+#footer .col-centered {
+  float: none;
+  margin: 0 auto;
+  width: 100%;
+}
+#footer .social-media {
+  list-style-type: none;
+  width: 100%;
+}
