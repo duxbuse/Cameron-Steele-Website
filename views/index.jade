@@ -7,22 +7,10 @@ block extraheader
 	
 
 block scripts
-	script(src="/javascripts/jquery.jplayer.js")
-	script(src="/javascripts/ttw-music-player-min.js")
-	script(src="/javascripts/index-playlist.js")
 	script(type="text/javascript").
 		$(document).ready(function(){
-			var description = 'This is a discription of the music player or any additional info you want to add here. ';
 
-			$('#jplayer').ttwMusicPlayer(index_playlist, {
-				autoPlay:false,
-				buyText: 'BUY', 
-				currencySymbol: '$',
-				description:description,
-				jPlayer:{
-					swfPath:'/javascripts' //You need to override the default swf path any time the directory structure changes
-				}
-			});
+			
 		});
     
 
@@ -33,17 +21,17 @@ block content
 				div(class="col-md-6" id="genji")
 					h1 Overwatch Genji Original
 					a(href="/music#genji")
-						img(src="/images/Genji-Overwatch.jpg", class="img-responsive center-block", alt="Genji Original")
+						img(src="/images/index/Genji_portrait_half_box.jpg", class="img-responsive center-block", alt="Genji Original")
 						
 				div(class="col-md-6" id="widomaker")
 					h1 Overwatch Widomaker Original
 					a(href="/music#widowmaker")
-						img(src="/images/Widowmaker-Overwatch.png", class="img-responsive center-block", alt="Widomaker Original")
+						img(src="/images/index/Widowmaker-half-box.jpg", class="img-responsive center-block", alt="Widomaker Original")
 
 			div(class="col-md-6 col-xs-12 parent" id="portfolio")
 				h1 Portfolio Piece Title
 				a(href="/music#portfolio")
-					img(src="/images/steele-logo.jpg", class="img-responsive center-block", alt="Steele-logo")
+					img(src="/images/index/Steele-Music-Logo-square.jpg", class="img-responsive center-block", alt="Steele-logo")
 
 			div(class="clearfix")
 				//force to next row
@@ -51,12 +39,12 @@ block content
 			div(class="col-md-6 col-xs-12 parent", id="void")
 				h1 League of Legends Void Original
 				a(href="/music#void")
-					img(src="/images/RekSai-League-of-Legends.jpg", class="img-responsive center-block", alt="RekSai League of Legends")
+					img(src="/images/index/RekSai-League-of-Legends-box.jpg", class="img-responsive center-block", alt="RekSai League of Legends")
 			
 			div(class="col-md-6 col-xs-12 parent", id="badass3")
 				h1 BADASS 3 Album Tracks
 				a(href="/music#badass3")
-					img(src="/images/Badass-3.jpg", class="img-responsive center-block", alt="Badass-3 album cover")
+					img(src="/images/index/Badass-3.jpg", class="img-responsive center-block", alt="Badass-3 album cover")
 
 			div(class="clearfix")
 				//force to next row
@@ -64,8 +52,8 @@ block content
 			div(class="col-md-6 col-xs-12 parent", id="cam")
 				h1 PICTURE OF ME
 				a(href="/bio")
-					img(src="/images/cam.jpg", class="img-responsive center-block", alt="What a nerd.")
-				h3 This is the short bio for nerds that wanna know. It goes on like this for ages and is a super boring read and I would recomend killing yourself to save you from the agony of reading this whole thing.
+					img(src="/images/index/Short-Bio-Pic.jpg", class="img-responsive center-block", alt="What a nerd.")
+				h3 My name is Cameron Steele. I am a freelance composer and sound designer who lives in Melbourne, Australia. I have a Bachelor's Degree in Musical Composition and I write music for games and films.
 
 			div(class="col-md-6 col-xs-12 parent text-left", id="jplayer")
 

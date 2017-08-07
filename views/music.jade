@@ -10,6 +10,7 @@ block scripts
 	script(type='text/javascript', src='/javascripts/jquery.html5audio.min.js')
 	script(type='text/javascript', src='/javascripts/jquery.html5audio.func.js')
 	script(type='text/javascript', src='/javascripts/jquery.html5audio.settings_full2.js')
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.settings_playlist_selector.js')	
 
 	script(type="text/javascript").
 		$(document).ready(function(){
@@ -83,6 +84,9 @@ block content
 						div(class='componentPlaylist')
 							div(class='playlist_inner')
 								//Playlist items are appended here
+								//local playlist
+								<ud id="playlist1"> 
+									<li class= 'playlistItem' data-type='local' data-mp3='../Music/portfolio-piece/Main_Portfolio_Piece.mp3' data-download="some_url"><a class='playlistNonSelected' href='#'>Cameron Steele - Main Portfolio Piece</a><a class='dlink' href='#' data-dlink='../Music/portfolio-piece/Main_Portfolio_Piece.mp3'><img src='../images/icons/set1/download.png' alt = 'download'/></a></li>
 						//Preloader
 						div(class='preloader')
 						

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+	
+	 <li class= 'playlistItem' data-type='local' data-mp3='../Music/portfolio-piece/Main_Portfolio_Piece.mp3' data-download="some_url"><a class='playlistNonSelected' href='#'>Cameron Steele - Main Portfolio Piece</a><a class='dlink' href='#' data-dlink='../Music/portfolio-piece/Main_Portfolio_Piece.mp3'><img src='../images/icons/set1/download.png' alt = 'download'/></a></li>
+	 
+	
+</data>

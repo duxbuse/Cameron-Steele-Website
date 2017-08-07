@@ -1,5 +1,5 @@
 body {
-  background: #444 url("../images/bg.jpg") repeat 0 0 scroll;
+  background: #444 url("../images/layout/bg.jpg") repeat 0 0 scroll;
   color: #9d9d9d;
 }
 #name,
@@ -22,6 +22,7 @@ body {
 #wrapper {
   float: none;
   margin: 0 auto;
+  margin-top: 28px;
   width: 100%;
   text-align: center;
 }
