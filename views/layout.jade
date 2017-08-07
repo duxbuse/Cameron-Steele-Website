@@ -27,11 +27,12 @@ html
 	body
 		header
 			nav(class="navbar navbar-default navbar-static-top navbar-inverse")
-					div(class="col-sm-5")
-						a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer 
-							span(class="glyphicon glyphicon-music")
-
 					div(class="container")
+						div(class="col-sm-4" id="name")
+							a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer 
+								span(class="glyphicon glyphicon-music")
+
+					
 						div(class="navbar-header")
 							button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
 								span(class="sr-only") Toggle Navigation
@@ -40,16 +41,16 @@ html
 								span(class="icon-bar")
 							
 						div(class="navbar-collapse collapse", id="navbar")
-								div(class="col-sm-5")
-									ul(class="nav navbar-nav")
+								div(class="col-sm-6")
+									ul(class="nav navbar-nav menu")
 										li
-											a(href="/") Home
+											a(href="/") HOME
 										li
-											a(href="/bio") Bio
+											a(href="/bio") BIO
 										li
-											a(href="/music") Music
+											a(href="/music") MUSIC
 										li
-											a(href="/contact") Contact
+											a(href="/contact") CONTACT
 
 								div(class="col-sm-2 social-media")
 									ul(class="nav navbar-nav navbar-right")

@@ -1,0 +1,90 @@
+extends layout
+
+block extraheader
+	//Custom styles for this page
+	link(rel='stylesheet', type="text/css", href="/stylesheets/html5audio_default.css")
+	link(rel='stylesheet', type="text/css", href="/stylesheets/html5audio_full2.css")
+
+
+block scripts
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.min.js')
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.func.js')
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.settings_full2.js')
+
+	script(type="text/javascript").
+		$(document).ready(function(){
+
+			
+		});
+
+
+block content
+	h1= title
+ 
+	div(class="container")
+		div(class="row", id="content")
+			//player code
+			div(class="col-md-12 parent")
+			div(class="col-md-12 parent")
+				div(id='componentWrapper')
+				
+					div(class='playerHolder')
+
+						//song name
+						div(class='player_mediaName_Mask')
+							div(class='player_mediaName')
+
+						//song time
+						div(class='player_mediaTime')
+							div(class='player_mediaTime_current') 0:00
+							div(class='player_mediaTime_total') 0:00
+
+						div(class='player_controls')
+							//Previous
+							div(class='controls_prev')
+								img(src='/images/icons/set1/prev.png', alt='controls_prev')
+							//Pause/Play
+							div(class='controls_toggle')
+								img(src='/images/icons/set1/play.png', alt='controls_toggle')
+							//Next
+							div(class='controls_next')
+								img(src='/images/icons/set1/next.png', alt='controls_next')
+
+							//Volume
+							div(class='player_volume')
+								img(src='/images/icons/set1/volume.png', alt='player_volume')
+							div(class='volume_seekbar')
+								div(class='volume_bg')
+								div(class='volume_level')
+								//Volume tooltip
+								div(class='player_volume_tooltip')
+									p
+
+							//Loop
+							div(class='player_loop')
+								img(src='/images/icons/set1/loop.png', alt='player_loop')
+							//Shuffle
+							div(class='player_shuffle')
+								img(src='/images/icons/set1/shuffle.png', alt='player_shuffle')
+							//Download
+							div(class='player_download')
+								img(src='/images/icons/set1/download.png', alt='player_download')
+
+						//Progress
+						div(class='player_progress')
+							div(class='progress_bg')
+							div(class='load_progress')
+							div(class='play_progress')
+							//Progress tooltip
+							div(class='player_progress_tooltip')
+								p
+
+					div(class='playlistHolder')
+						div(class='componentPlaylist')
+							div(class='playlist_inner')
+								//Playlist items are appended here
+						//Preloader
+						div(class='preloader')
+						
+
+				
