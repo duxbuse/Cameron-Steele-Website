@@ -1,8 +1,0 @@
-#content {
-  display: flex;
-  flex-wrap: wrap;
-}
-#content .parent {
-  padding: 10px;
-  box-shadow: 0px 0px 2px 1px rgba(62,62,62,0.25);
-}

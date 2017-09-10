@@ -4,17 +4,18 @@ block extraheader
 	//Custom styles for this page
 	link(rel='stylesheet', href='/stylesheets/index.css')
 	link(rel="stylesheet", href='/stylesheets/music-player.css')
-	
+
 
 block scripts
 	script(type="text/javascript").
 		$(document).ready(function(){
 
-			
+
 		});
-    
+
 
 block content
+	h1= title
 	div(class="container")
 		div(class="row", id="content")
 			div(class="col-md-6 col-xs-12 parent" id="overwatch")
@@ -22,7 +23,7 @@ block content
 					h1 Overwatch Genji Original
 					a(href="/music#genji")
 						img(src="/images/index/Genji_portrait_half_box.jpg", class="img-responsive center-block", alt="Genji Original")
-						
+
 				div(class="col-md-6" id="widomaker")
 					h1 Overwatch Widomaker Original
 					a(href="/music#widowmaker")
@@ -40,7 +41,7 @@ block content
 				h1 League of Legends Void Original
 				a(href="/music#void")
 					img(src="/images/index/RekSai-League-of-Legends-box.jpg", class="img-responsive center-block", alt="RekSai League of Legends")
-			
+
 			div(class="col-md-6 col-xs-12 parent", id="badass3")
 				h1 BADASS 3 Album Tracks
 				a(href="/music#badass3")

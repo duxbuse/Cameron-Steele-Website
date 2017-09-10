@@ -19,7 +19,7 @@ html
 		link(rel='stylesheet', href='/stylesheets/ie10-viewport-bug-workaround.css')
 
 		//Custom styles for this template
-		link(rel='stylesheet', href='/stylesheets/layout-style.css')
+		link(rel='stylesheet', href='/stylesheets/layout.css')
 
 		block extraheader
 	body
@@ -27,17 +27,17 @@ html
 			nav(class="navbar navbar-default navbar-fixed-top navbar-inverse")
 					div(class="container")
 						div(class="col-sm-4" id="name")
-							a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer 
+							a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer
 								span(class="glyphicon glyphicon-music")
 
-					
+
 						div(class="navbar-header")
 							button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
 								span(class="sr-only") Toggle Navigation
 								span(class="icon-bar")
 								span(class="icon-bar")
 								span(class="icon-bar")
-							
+
 						div(class="navbar-collapse collapse", id="navbar")
 								div(class="col-sm-6")
 									ul(class="nav navbar-nav menu")
@@ -59,12 +59,12 @@ html
 										li
 											img(src="/images/layout/youtube.png", class="img-thumbnail", alt="Youtube", href="#", width="30", height="30")
 
-							
+
 		//this section has the id="wrapper"
 		section#wrapper
 			block content
 
-		footer 
+		footer
 			div(class="container", id="footer")
 				div(class="row")
 					div(class="col-sm-7 col-centered text-center")
@@ -81,7 +81,8 @@ html
 							span © 2017 Cameron Steele. Site by 
 							a(href="") Duxbury Digital
 
-	//scripts added at the end to improve load times				
-	script(src="/javascripts/jquery-3.2.0.min.js")
+	//scripts added at the end to improve load times
+	//script(src="/javascripts/jquery-3.2.0.min.js")
+	script(src="/javascripts/jquery-3.2.1.js")
 	script(src="/javascripts/bootstrap.min.js")
 	block scripts

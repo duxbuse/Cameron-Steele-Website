@@ -3,32 +3,27 @@ extends layout
 block extraheader
 	//Custom styles for this page
 	link(rel='stylesheet', type="text/css", href="/stylesheets/html5audio_default.css")
-	link(rel='stylesheet', type="text/css", href="/stylesheets/html5audio_full2.css")
+	link(rel='stylesheet', type="text/css", href="/stylesheets/musicAudioPlayer.css")
+	link(rel='stylesheet', type='text/css', href='/stylesheets/music.css')
 
 
 block scripts
-	script(type='text/javascript', src='/javascripts/jquery.html5audio.min.js')
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.js')
 	script(type='text/javascript', src='/javascripts/jquery.html5audio.func.js')
-	script(type='text/javascript', src='/javascripts/jquery.html5audio.settings_full2.js')
-	script(type='text/javascript', src='/javascripts/jquery.html5audio.settings_playlist_selector.js')	
-
-	script(type="text/javascript").
-		$(document).ready(function(){
-
-			
-		});
+	script(type='text/javascript', src='/javascripts/MusicPageSettings.js')
+	script(type='text/javascript', src='/javascripts/jquery-ui-1.10.3.custom.min.js')
+	script(type='text/javascript', src='/javascripts/jquery.ui.touch-punch.min.js')
 
 
 block content
 	h1= title
- 
-	div(class="container")
+	div(class="container-fluid")
 		div(class="row", id="content")
-			//player code
-			div(class="col-md-12 parent")
-			div(class="col-md-12 parent")
-				div(id='componentWrapper')
-				
+
+			//Portfiolo Block
+			div(class="col-md-6 parent")
+				div(class="audioplayerWrapper", id='componentWrapper')
+
 					div(class='playerHolder')
 
 						//song name
@@ -84,11 +79,247 @@ block content
 						div(class='componentPlaylist')
 							div(class='playlist_inner')
 								//Playlist items are appended here
-								//local playlist
-								<ud id="playlist1"> 
-									<li class= 'playlistItem' data-type='local' data-mp3='../Music/portfolio-piece/Main_Portfolio_Piece.mp3' data-download="some_url"><a class='playlistNonSelected' href='#'>Cameron Steele - Main Portfolio Piece</a><a class='dlink' href='#' data-dlink='../Music/portfolio-piece/Main_Portfolio_Piece.mp3'><img src='../images/icons/set1/download.png' alt = 'download'/></a></li>
 						//Preloader
 						div(class='preloader')
-						
 
+
+			div(class="col-md-6")
+				p Originals based on exsisting characters - Lorem ipsum dolor sit amet, nibh sit rutrum cras neque amet, vestibulum ab quam suspendisse. Scelerisque massa velit donec, aliquet adipiscing laoreet enim ipsum, accumsan dictum aptent, urna netus molestie quam semper, a interdum consequat auctor ornare in tellus. Id a vehicula nam ac blandit. Accumsan quo sapien id, praesent eget orci lacus adipiscing urna, at nec quis, dolor penatibus sit scelerisque et vestibulum. Mauris eget tristique. In in taciti proin.
+
+
+
+
+
+		div(class="row")
+			//Originals on other characters
+			div(class="col-md-6 parent")
+				p Portfolio Peices - Lorem ipsum dolor sit amet, nibh sit rutrum cras neque amet, vestibulum ab quam suspendisse. Scelerisque massa velit donec, aliquet adipiscing laoreet enim ipsum, accumsan dictum aptent, urna netus molestie quam semper, a interdum consequat auctor ornare in tellus. Id a vehicula nam ac blandit. Accumsan quo sapien id, praesent eget orci lacus adipiscing urna, at nec quis, dolor penatibus sit scelerisque et vestibulum. Mauris eget tristique. In in taciti proin.
 				
+
+			
+			div(class="col-md-6")
+				div(class="audioplayerWrapper", id='componentWrapper2')
+
+					div(class='playerHolder')
+
+						//song name
+						div(class='player_mediaName_Mask')
+							div(class='player_mediaName')
+
+						//song time
+						div(class='player_mediaTime')
+							div(class='player_mediaTime_current') 0:00
+							div(class='player_mediaTime_total') 0:00
+
+						div(class='player_controls')
+							//Previous
+							div(class='controls_prev')
+								img(src='/images/icons/set1/prev.png', alt='controls_prev')
+							//Pause/Play
+							div(class='controls_toggle')
+								img(src='/images/icons/set1/play.png', alt='controls_toggle')
+							//Next
+							div(class='controls_next')
+								img(src='/images/icons/set1/next.png', alt='controls_next')
+
+							//Volume
+							div(class='player_volume')
+								img(src='/images/icons/set1/volume.png', alt='player_volume')
+							div(class='volume_seekbar')
+								div(class='volume_bg')
+								div(class='volume_level')
+								//Volume tooltip
+								div(class='player_volume_tooltip')
+									p
+
+							//Loop
+							div(class='player_loop')
+								img(src='/images/icons/set1/loop.png', alt='player_loop')
+							//Shuffle
+							div(class='player_shuffle')
+								img(src='/images/icons/set1/shuffle.png', alt='player_shuffle')
+							//Download
+							div(class='player_download')
+								img(src='/images/icons/set1/download.png', alt='player_download')
+
+						//Progress
+						div(class='player_progress')
+							div(class='progress_bg')
+							div(class='load_progress')
+							div(class='play_progress')
+							//Progress tooltip
+							div(class='player_progress_tooltip')
+								p
+
+					div(class='playlistHolder')
+						div(class='componentPlaylist')
+							div(class='playlist_inner')
+								//Playlist items are appended here
+						//Preloader
+						div(class='preloader')
+				
+
+			
+
+
+
+
+		div(class="row")
+			//Remixes Block
+			div(class="col-md-6 parent")
+				div(class="audioplayerWrapper", id='componentWrapper3')
+
+					div(class='playerHolder')
+
+						//song name
+						div(class='player_mediaName_Mask')
+							div(class='player_mediaName')
+
+						//song time
+						div(class='player_mediaTime')
+							div(class='player_mediaTime_current') 0:00
+							div(class='player_mediaTime_total') 0:00
+
+						div(class='player_controls')
+							//Previous
+							div(class='controls_prev')
+								img(src='/images/icons/set1/prev.png', alt='controls_prev')
+							//Pause/Play
+							div(class='controls_toggle')
+								img(src='/images/icons/set1/play.png', alt='controls_toggle')
+							//Next
+							div(class='controls_next')
+								img(src='/images/icons/set1/next.png', alt='controls_next')
+
+							//Volume
+							div(class='player_volume')
+								img(src='/images/icons/set1/volume.png', alt='player_volume')
+							div(class='volume_seekbar')
+								div(class='volume_bg')
+								div(class='volume_level')
+								//Volume tooltip
+								div(class='player_volume_tooltip')
+									p
+
+							//Loop
+							div(class='player_loop')
+								img(src='/images/icons/set1/loop.png', alt='player_loop')
+							//Shuffle
+							div(class='player_shuffle')
+								img(src='/images/icons/set1/shuffle.png', alt='player_shuffle')
+							//Download
+							div(class='player_download')
+								img(src='/images/icons/set1/download.png', alt='player_download')
+
+						//Progress
+						div(class='player_progress')
+							div(class='progress_bg')
+							div(class='load_progress')
+							div(class='play_progress')
+							//Progress tooltip
+							div(class='player_progress_tooltip')
+								p
+
+					div(class='playlistHolder')
+						div(class='componentPlaylist')
+							div(class='playlist_inner')
+								//Playlist items are appended here
+						//Preloader
+						div(class='preloader')
+
+			div(class="col-md-6")
+				p Remixes - Lorem ipsum dolor sit amet, nibh sit rutrum cras neque amet, vestibulum ab quam suspendisse. Scelerisque massa velit donec, aliquet adipiscing laoreet enim ipsum, accumsan dictum aptent, urna netus molestie quam semper, a interdum consequat auctor ornare in tellus. Id a vehicula nam ac blandit. Accumsan quo sapien id, praesent eget orci lacus adipiscing urna, at nec quis, dolor penatibus sit scelerisque et vestibulum. Mauris eget tristique. In in taciti proin.
+
+
+
+
+
+	div(id="playlist_list")
+						//Originals based on characters
+						ul(id='playlist1' style="display:none;")
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Genji's-Theme-(Overwatch-Original).mp3")
+								a(class='playlistNonSelected' href='#') Genji's Theme (Overwatch Original)
+
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Reinhardt's-Theme-(Overwatch-Original).mp3")
+								a(class='playlistNonSelected' href='#') Reinhardt's Theme (Overwatch Original)
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Soldier 76's-Theme-(Overwatch-Original).mp3")
+								a(class='playlistNonSelected' href='#') Soldier 76's Theme (Overwatch Original)
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Treasure-Bug's-Theme-(Monster-Hunter-Original).mp3")
+								a(class='playlistNonSelected' href='#') Treasure Bug's Theme (Monster Hunter Original)
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Welcome-to-the-Void-(League-Of-Legends-Original).mp3")
+								a(class='playlistNonSelected' href='#') Welcome to the Void (League Of Legends Original)
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Widowmaker's-Theme-(Overwatch-Original).mp3")
+								a(class='playlistNonSelected' href='#') Widowmaker's Theme (Overwatch Original)
+
+						//Portfolio Peices
+						ul(id='playlist2' style="display:none;")
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Ancient-Temple.mp3')
+								a(class='playlistNonSelected' href='#') Ancient Temple
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Atmospheric-Dungeon.mp3')
+								a(class='playlistNonSelected' href='#') Atmospheric Dungeon
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Celtic-Dance.mp3')
+								a(class='playlistNonSelected' href='#') Celtic Dance
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Dark-Synthetic-Cave.mp3')
+								a(class='playlistNonSelected' href='#') Dark Synthetic Cave
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Happy-Snow-Town.mp3')
+								a(class='playlistNonSelected' href='#') Happy Snow Town
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Jungle.mp3')
+								a(class='playlistNonSelected' href='#') Jungle
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Orchestral-Horror.mp3')
+								a(class='playlistNonSelected' href='#') Orchestral Horror
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Overwhelming-Foe.mp3')
+								a(class='playlistNonSelected' href='#') Overwhelming Foe
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/RPG-Title-Screen.mp3')
+								a(class='playlistNonSelected' href='#') RPG Title Screen
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Sneak-Mission.mp3')
+								a(class='playlistNonSelected' href='#') Sneak Mission
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/The-Expanse.mp3')
+								a(class='playlistNonSelected' href='#') The Expanse
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Theme-S.mp3')
+								a(class='playlistNonSelected' href='#') Theme S
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Upbeat-Battle.mp3')
+								a(class='playlistNonSelected' href='#') Upbeat Battle
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Water-Caves.mp3')
+								a(class='playlistNonSelected' href='#') Water Caves
+
+							
+
+
+
+						ul(id='playlist3' style="display:none;")
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Remixes/Dry-Trail-Remix-(Tales-Of-Symphonia).mp3')
+								a(class='playlistNonSelected' href='#') Dry Trail Remix (Tales Of Symphonia)
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Remixes/Frantic-Factory-(Donkey-Kong-Country-Remix).mp3')
+								a(class='playlistNonSelected' href='#') Frantic Factory (Donkey Kong Country Remix)
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Remixes/Gaia's-Tomb-(Golden-Sun-2-Gaia-Rock-Remix-2).mp3")
+								a(class='playlistNonSelected' href='#') Gaia's Tomb (Golden Sun 2 Gaia Rock Remix 2)
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Remixes/Mad-Jack-Remix-(Donkey-Kong-64).mp3')
+								a(class='playlistNonSelected' href='#') Mad Jack Remix (Donkey Kong 64)
+
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Remixes/Majora's-Lullaby-(Stone-Tower-Temple-Zelda-Remix)")
+								a(class='playlistNonSelected' href='#') Majora's Lullaby (Stone Tower Temple Zelda Remix)
+
+							
+
+
