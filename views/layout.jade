@@ -27,7 +27,7 @@ html
 			nav(class="navbar navbar-default navbar-fixed-top navbar-inverse")
 					div(class="container")
 						div(class="col-sm-4" id="name")
-							a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer
+							a(class="navbar-brand navbar-left", href="/") Cameron Steele - Composer 
 								span(class="glyphicon glyphicon-music")
 
 
@@ -42,13 +42,25 @@ html
 								div(class="col-sm-6")
 									ul(class="nav navbar-nav menu")
 										li
-											a(href="/") HOME
+											if title == "Home"
+												a(href="/", style="color:#337ab7") HOME
+											else
+												a(href="/") HOME
 										li
-											a(href="/bio") BIO
+											if title == "Bio"
+												a(href="/bio", style="color:#337ab7") BIO
+											else
+												a(href="/bio") BIO
 										li
-											a(href="/music") MUSIC
+											if title == "Music"
+												a(href="/music", style="color:#337ab7") MUSIC
+											else
+												a(href="/music") MUSIC
 										li
-											a(href="/contact") CONTACT
+											if title == "Contact"
+												a(href="/contact", style="color:#337ab7") CONTACT
+											else
+												a(href="/contact") CONTACT
 
 								div(class="col-sm-2 social-media")
 									ul(class="nav navbar-nav navbar-right")

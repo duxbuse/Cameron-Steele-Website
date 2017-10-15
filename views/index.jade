@@ -3,60 +3,181 @@ extends layout
 block extraheader
 	//Custom styles for this page
 	link(rel='stylesheet', href='/stylesheets/index.css')
-	link(rel="stylesheet", href='/stylesheets/music-player.css')
-
+	link(rel='stylesheet', type="text/css", href="/stylesheets/html5audio_default.css")
+	link(rel='stylesheet', type="text/css", href="/stylesheets/musicAudioPlayer.css")
+	link(rel='stylesheet', type="text/css", href="/stylesheets/jquery.jscrollpane.css", media="all")
 
 block scripts
-	script(type="text/javascript").
-		$(document).ready(function(){
-
-
-		});
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.js')
+	script(type='text/javascript', src='/javascripts/jquery.html5audio.func.js')
+	script(type='text/javascript', src='/javascripts/IndexPageSettings.js')
+	script(type='text/javascript', src='/javascripts/jquery-ui-1.10.3.custom.min.js')
+	script(type='text/javascript', src='/javascripts/jquery.ui.touch-punch.min.js')
+	script(type='text/javascript', src='/javascripts/jquery.jscrollpane.min.js')
+	script(type='text/javascript', src='/javascripts/jquery.mousewheel.min.js')
 
 
 block content
 	h1= title
-	div(class="container")
-		div(class="row", id="content")
-			div(class="col-md-6 col-xs-12 parent" id="overwatch")
-				div(class="col-md-6" id="genji")
-					h1 Overwatch Genji Original
-					a(href="/music#genji")
-						img(src="/images/index/Genji_portrait_half_box.jpg", class="img-responsive center-block", alt="Genji Original")
-
-				div(class="col-md-6" id="widomaker")
-					h1 Overwatch Widomaker Original
-					a(href="/music#widowmaker")
-						img(src="/images/index/Widowmaker-half-box.jpg", class="img-responsive center-block", alt="Widomaker Original")
-
-			div(class="col-md-6 col-xs-12 parent" id="portfolio")
-				h1 Portfolio Piece Title
-				a(href="/music#portfolio")
-					img(src="/images/index/Steele-Music-Logo-square.jpg", class="img-responsive center-block", alt="Steele-logo")
-
-			div(class="clearfix")
-				//force to next row
-
-			div(class="col-md-6 col-xs-12 parent", id="void")
-				h1 League of Legends Void Original
-				a(href="/music#void")
-					img(src="/images/index/RekSai-League-of-Legends-box.jpg", class="img-responsive center-block", alt="RekSai League of Legends")
-
-			div(class="col-md-6 col-xs-12 parent", id="badass3")
-				h1 BADASS 3 Album Tracks
-				a(href="/music#badass3")
-					img(src="/images/index/Badass-3.jpg", class="img-responsive center-block", alt="Badass-3 album cover")
-
-			div(class="clearfix")
-				//force to next row
+	div(class="container", id="content")
+		div(class="row row-eq-height")
 
 			div(class="col-md-6 col-xs-12 parent", id="cam")
-				h1 PICTURE OF ME
-				a(href="/bio")
-					img(src="/images/index/Short-Bio-Pic.jpg", class="img-responsive center-block", alt="What a nerd.")
-				h3 My name is Cameron Steele. I am a freelance composer and sound designer who lives in Melbourne, Australia. I have a Bachelor's Degree in Musical Composition and I write music for games and films.
+				img(src="/images/index/Short-Bio-Pic.jpg", class="img-responsive center-block", alt="What a nerd.")
+				h3 My name is Cameron Steele. I am a freelance composer and sound designer living in Melbourne, Australia. I have a Bachelor's Degree in Musical Composition and I write music for games and films.
 
-			div(class="col-md-6 col-xs-12 parent text-left", id="jplayer")
+			div(class="col-md-6 col-xs-12", id="jplayer")
+					div(class="audioplayerWrapper", id='componentWrapper')
 
-			div(class="clearfix")
-				//force to next row
+						div(class='playerHolder')
+
+							//song name
+							div(class='player_mediaName_Mask')
+								div(class='player_mediaName')
+
+							//song time
+							div(class='player_mediaTime')
+								div(class='player_mediaTime_current') 0:00
+								div(class='player_mediaTime_total') 0:00
+
+							div(class='player_controls')
+								//Previous
+								div(class='controls_prev')
+									img(src='/images/icons/set1/prev.png', alt='controls_prev')
+								//Pause/Play
+								div(class='controls_toggle')
+									img(src='/images/icons/set1/play.png', alt='controls_toggle')
+								//Next
+								div(class='controls_next')
+									img(src='/images/icons/set1/next.png', alt='controls_next')
+
+								//Volume
+								div(class='player_volume')
+									img(src='/images/icons/set1/volume.png', alt='player_volume')
+								div(class='volume_seekbar')
+									div(class='volume_bg')
+									div(class='volume_level')
+									//Volume tooltip
+									div(class='player_volume_tooltip')
+										p
+
+								//Loop
+								div(class='player_loop')
+									img(src='/images/icons/set1/loop.png', alt='player_loop')
+								//Shuffle
+								div(class='player_shuffle')
+									img(src='/images/icons/set1/shuffle.png', alt='player_shuffle')
+								//Download
+								div(class='player_download')
+									img(src='/images/icons/set1/download.png', alt='player_download')
+
+							//Progress
+							div(class='player_progress')
+								div(class='progress_bg')
+								div(class='load_progress')
+								div(class='play_progress')
+								//Progress tooltip
+								div(class='player_progress_tooltip')
+									p
+
+						div(class='playlistHolder')
+							div(class='componentPlaylist')
+								div(class='playlist_inner')
+									//Playlist items are appended here
+							//Preloader
+							div(class='preloader')
+
+
+
+
+		div(class="row row-eq-height")
+
+			div(class="col-md-6 col-xs-12" id="overwatch")
+				h1 Overwatch Originals
+				div(class="container-fluid")
+					div(class="row row-eq-height")
+						div(class="col-md-6" id="genji")
+							a(href="#", onclick="api_loadAudio(hap_players[0],0); return false;")
+								img(src="/images/index/Genji.jpg", class="img-responsive center-block", alt="Genji Original")
+
+						div(class="col-md-6" id="widomaker")
+							a(href="#", onclick="api_loadAudio(hap_players[0],1); return false;")
+								img(src="/images/index/Widowmaker.jpg", class="img-responsive center-block", alt="Widomaker Original")
+
+					div(class="row row-eq-height")
+						div(class="col-md-6" id="reinhardt")
+							a(href="#", onclick="api_loadAudio(hap_players[0],2); return false;")
+								img(src="/images/index/reinhardt.jpg", class="img-responsive center-block", alt="Reinhardt Original")
+
+						div(class="col-md-6" id="soldier 76")
+							a(href="#", onclick="api_loadAudio(hap_players[0],3); return false;")
+								img(src="/images/index/Soldier 76.jpg", class="img-responsive center-block", alt="Soldier 76 Original")
+
+			div(class="col-md-6 col-xs-12 parent" id="portfolio")
+				h1 Portfolio Piece
+				a(href="#", onclick="api_loadAudio(hap_players[0],4); return false;")
+					img(src="/images/index/Steele Music Logo test.jpg", class="img-responsive center-block", alt="Steele-logo")
+
+			div(class="row row-eq-height")
+
+
+				div(class="col-md-6 col-xs-12 parent", id="badass3")
+					h1 BADASS 3 Album Tracks
+					a(href="#", onclick="api_loadAudio(hap_players[0],5); return false;")
+						img(src="/images/index/Badass-3.jpg", class="img-responsive center-block", alt="Badass-3 album cover")
+
+				div(class="col-md-6 col-xs-12 parent", id="void")
+					h1 League of Legends Originals
+					div(class="container-fluid", id="league")
+						div(class="row row-eq-height")
+							div(class="col-md-6" id="reksai")
+								a(href="#", onclick="api_loadAudio(hap_players[0],6); return false;")
+									img(src="/images/index/RekSai-League-of-Legends.jpg", class="img-responsive center-block", alt="RekSai Original")
+
+							div(class="col-md-6" id="taliyah")
+								a(href="#", onclick="api_loadAudio(hap_players[0],7); return false;")
+									img(src="/images/index/Taliyah-League-of-Legends.jpg", class="img-responsive center-block", alt="Taliyah Original")
+
+				
+
+
+			
+	div(id="playlist_list")
+		ul(id='playlist1' style="display:none;")
+
+			//Overwatch Tracks
+
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Genji's-Theme-(Overwatch-Original).mp3")
+				a(class='playlistNonSelected' href='#') Genji's Theme (Overwatch Original)
+
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Widowmaker's-Theme-(Overwatch-Original).mp3")
+				a(class='playlistNonSelected' href='#') Widowmaker's Theme (Overwatch Original)
+
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Reinhardt's-Theme-(Overwatch-Original).mp3")
+				a(class='playlistNonSelected' href='#') Reinhardt's Theme (Overwatch Original)
+
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Soldier 76's-Theme-(Overwatch-Original).mp3")
+				a(class='playlistNonSelected' href='#') Soldier 76's Theme (Overwatch Original)
+
+
+			//Portfolio Track
+
+
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Treasure-Bug's-Theme-(Monster-Hunter-Original).mp3")
+				a(class='playlistNonSelected' href='#') Treasure Bug's Theme (Monster Hunter Original)
+
+
+
+			//Badass 3 track
+
+			li(class= 'playlistItem' data-type='local' data-mp3='../Music/Remixes/Mad-Jack-Remix-(Donkey-Kong-64).mp3')
+				a(class='playlistNonSelected' href='#') Mad Jack Remix (Donkey Kong 64)
+
+			//League of legends tracks
+			
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Welcome-to-the-Void-(League-Of-Legends-Original).mp3")
+				a(class='playlistNonSelected' href='#') Welcome to the Void (League Of Legends Original)
+
+			li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Synthetic Stones (Taliyah Remix).mp3")
+				a(class='playlistNonSelected' href='#') Synthetic Stones (League Of Legends Original)
+

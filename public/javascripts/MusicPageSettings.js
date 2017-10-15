@@ -319,20 +319,20 @@ var hap_settings3 = {
 	useAlertMessaging: true,
 
 	/* activatePlaylistScroll: true/false. activate jScrollPane. */
-	activatePlaylistScroll: false,
+	activatePlaylistScroll: true,
 	/* playlistScrollOrientation: vertical/horizontal. */
 	playlistScrollOrientation: 'vertical',
 
 	/* sortablePlaylistItems: true/false. Make playlist items sortable */
-	sortablePlaylistItems: true,
+	sortablePlaylistItems: false,
 	/* useRemoveBtnInTracks: true/false. Create remove buttons in playlist items for removing tracks. */
-	useRemoveBtnInTracks: true,
+	useRemoveBtnInTracks: false,
 
 	/* autoReuseMailForDownload: true/false. download backup for ios, save email after client first enters email address and auto send all emails to the same address */
 	autoReuseMailForDownload: true,
 
 	/* useKeyboardNavigation: false/false. Use keyboard navigation for music (space=toggle audio, left arrow=previous media, right arrow=next media, m=toggle volume) */
-	useKeyboardNavigation: false,
+	useKeyboardNavigation: true,
 
 	/* getTrackInfoFromID3: false/false. Get track info from id3 tags (title, artist, album, artwork) */
 	getTrackInfoFromID3: false

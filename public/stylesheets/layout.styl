@@ -1,7 +1,18 @@
+@font-face
+	font-family: KennedySC GD Book;
+	src: url('../fonts/KennedySC GD Book.ttf')
+
 body
 	background: #444 url(../images/layout/bg.jpg) repeat 0 0 scroll
 	color: #9d9d9d
 	padding-top: 65px
+	
+h1
+	font-family: KennedySC GD Book
+	font-weight: 600
+	//400 is normal, 700 is bold. Not sure if this font supports values inbetween
+	//font-family: Roboto
+
 
 #content
 	display: flex
@@ -13,6 +24,7 @@ body
 
 #navbar
 	font-weight:600
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	.menu
 		letter-spacing:3.5px
 		font-weight:700
@@ -21,6 +33,9 @@ body
 		padding:10px
 		li
 			margin: 0 5px 0 5px
+			
+.navbar-toggle
+	position: absolute
 
 
 
@@ -54,6 +69,8 @@ body
 	border-top-right-radius: 0px
 	padding: 20px
 
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	
 	.col-centered
 		float: none
 		margin: 0 auto

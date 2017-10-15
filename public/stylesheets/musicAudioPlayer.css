@@ -25,17 +25,17 @@ body {
 }
 
 /* player audio name mask for the name scroll function. */
-.audioplayerWrapper .player_mediaName_Mask{
+#componentWrapper .player_mediaName_Mask{
 	position:relative;
 	top:7px;
 	left:20px;
 	float:left;
-
+	
 	width:60%;
 	width: -webkit-calc(100% - 135px);
     width: -moz-calc(100% - 135px);
     width: calc(100% - 135px);
-
+	
 	height:20px;
 	overflow:hidden;
 	background:#333;
@@ -324,7 +324,7 @@ body {
 	padding:5px 0px 5px 10px;
 
 	list-style:none;
-	cursor:move;
+	/*cursor:move;*/
 
 }
 

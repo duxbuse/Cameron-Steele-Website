@@ -1,0 +1,19 @@
+#overwatch .col-md-6 {
+  padding: 10px;
+}
+#portfolio img {
+  max-height: 583px;
+}
+#badass3 img {
+  padding: 10px;
+}
+#league img {
+  max-height: 578px;
+}
+#componentWrapper {
+  padding: 10px;
+}
+#componentWrapper .componentPlaylist {
+  max-height: 170px;
+  overflow: hidden;
+}

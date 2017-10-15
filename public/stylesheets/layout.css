@@ -1,7 +1,15 @@
+@font-face {
+  font-family: KennedySC GD Book;
+  src: url("../fonts/KennedySC GD Book.ttf");
+}
 body {
   background: #444 url("../images/layout/bg.jpg") repeat 0 0 scroll;
   color: #9d9d9d;
   padding-top: 65px;
+}
+h1 {
+  font-family: KennedySC GD Book;
+  font-weight: 600;
 }
 #content {
   display: flex;
@@ -13,6 +21,7 @@ body {
 }
 #navbar {
   font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #navbar .menu {
   letter-spacing: 3.5px;
@@ -23,6 +32,9 @@ body {
 }
 #navbar .social-media li {
   margin: 0 5px 0 5px;
+}
+.navbar-toggle {
+  position: absolute;
 }
 #wrapper {
   float: none;
@@ -49,6 +61,7 @@ body {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   padding: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #footer .col-centered {
   float: none;
