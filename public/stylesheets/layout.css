@@ -27,11 +27,11 @@ h1 {
   letter-spacing: 3.5px;
   font-weight: 700;
 }
-#navbar .social-media {
-  padding: 10px;
-}
 #navbar .social-media li {
   margin: 0 5px 0 5px;
+}
+#navbar .social-media a {
+  padding: 5px;
 }
 .navbar-toggle {
   position: absolute;
