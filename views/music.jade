@@ -5,7 +5,7 @@ block extraheader
 	link(rel='stylesheet', type="text/css", href="/stylesheets/html5audio_default.css")
 	link(rel='stylesheet', type="text/css", href="/stylesheets/musicAudioPlayer.css")
 	link(rel='stylesheet', type='text/css', href='/stylesheets/music.css')
-
+	link(rel='stylesheet', type="text/css", href="/stylesheets/jquery.jscrollpane.css", media="all")
 
 block scripts
 	script(type='text/javascript', src='/javascripts/jquery.html5audio.js')
@@ -19,11 +19,11 @@ block scripts
 
 block content
 	h1= title
-	div(class="container-fluid")
-		div(class="row", id="content")
+	div(class="container", id="content")
+		div(class="row parent")
 
-			//Portfiolo Block
-			div(class="col-md-6 parent")
+			//Originals on other characters
+			div(class="col-md-6")
 				div(class="audioplayerWrapper", id='componentWrapper')
 
 					div(class='playerHolder')
@@ -86,15 +86,21 @@ block content
 
 
 			div(class="col-md-6")
-				p Originals based on exsisting characters - Lorem ipsum dolor sit amet, nibh sit rutrum cras neque amet, vestibulum ab quam suspendisse. Scelerisque massa velit donec, aliquet adipiscing laoreet enim ipsum, accumsan dictum aptent, urna netus molestie quam semper, a interdum consequat auctor ornare in tellus. Id a vehicula nam ac blandit. Accumsan quo sapien id, praesent eget orci lacus adipiscing urna, at nec quis, dolor penatibus sit scelerisque et vestibulum. Mauris eget tristique. In in taciti proin.
+				h3 Original Music Based on Existing Games:
+
+				p.
+					These tracks are the music that I have composed based on games that are available now.
+					I analyse the characters background and take into account their look and personality to make the music that suits them.
+					I have been inspired by many Overwatch characters because they usually don’t have any musical themes attached to them.
 
 
 
 
 
-		div(class="row")
-			//Originals on other characters
-			div(class="col-md-6 parent")
+
+		div(class="row parent")
+			//Portfolio pieces
+			div(class="col-md-6")
 				div(class="audioplayerWrapper", id='componentWrapper2')
 
 					div(class='playerHolder')
@@ -159,7 +165,13 @@ block content
 
 			
 			div(class="col-md-6")
-				p Portfolio Peices - Lorem ipsum dolor sit amet, nibh sit rutrum cras neque amet, vestibulum ab quam suspendisse. Scelerisque massa velit donec, aliquet adipiscing laoreet enim ipsum, accumsan dictum aptent, urna netus molestie quam semper, a interdum consequat auctor ornare in tellus. Id a vehicula nam ac blandit. Accumsan quo sapien id, praesent eget orci lacus adipiscing urna, at nec quis, dolor penatibus sit scelerisque et vestibulum. Mauris eget tristique. In in taciti proin.
+				h3 Portfolio Pieces:
+
+				p.
+					These tracks contain music that is tailored for a specific area or moment. I try to capture the essence of the place or person in the scene.
+					These are a number of my favourites that I have written over the years.
+					In the beginning I started out with remixing tracks but over the years I became inspired to write my own music and the more I wrote the better I became. Writing original music has become enjoyable and second nature to me now.
+
 				
 
 			
@@ -167,9 +179,9 @@ block content
 
 
 
-		div(class="row")
+		div(class="row parent")
 			//Remixes Block
-			div(class="col-md-6 parent")
+			div(class="col-md-6")
 				div(class="audioplayerWrapper", id='componentWrapper3')
 
 					div(class='playerHolder')
@@ -231,7 +243,12 @@ block content
 						div(class='preloader')
 
 			div(class="col-md-6")
-				p Remixes - Lorem ipsum dolor sit amet, nibh sit rutrum cras neque amet, vestibulum ab quam suspendisse. Scelerisque massa velit donec, aliquet adipiscing laoreet enim ipsum, accumsan dictum aptent, urna netus molestie quam semper, a interdum consequat auctor ornare in tellus. Id a vehicula nam ac blandit. Accumsan quo sapien id, praesent eget orci lacus adipiscing urna, at nec quis, dolor penatibus sit scelerisque et vestibulum. Mauris eget tristique. In in taciti proin.
+				h3 Remixes:
+				p.
+					These are the pieces that I started out with; I began by making remixes of my favourite games.
+					As time went on I became interested in writing original music but I still make remixes for fun.
+					Remixes are quite a different experience in terms of writing though. Trying to take someone else’s ideas and change them so that they sound familiar but also different can be a challenge.It pushes me to make big decisions on how to change a piece that sounds interesting and engaging.
+
 
 
 
@@ -250,14 +267,18 @@ block content
 							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Soldier 76's-Theme-(Overwatch-Original).mp3")
 								a(class='playlistNonSelected' href='#') Soldier 76's Theme (Overwatch Original)
 
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Synthetic Stones (Taliyah Remix).mp3")
+								a(class='playlistNonSelected' href='#') Synthetic Stones (League Of Legends Original)
+
+
 							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Treasure-Bug's-Theme-(Monster-Hunter-Original).mp3")
 								a(class='playlistNonSelected' href='#') Treasure Bug's Theme (Monster Hunter Original)
 
 							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Welcome-to-the-Void-(League-Of-Legends-Original).mp3")
 								a(class='playlistNonSelected' href='#') Welcome to the Void (League Of Legends Original)
 
-							//- li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Widowmaker's-Theme-(Overwatch-Original).mp3")
-							//- 	a(class='playlistNonSelected' href='#') Widowmaker's Theme (Overwatch Original)
+							li(class= 'playlistItem' data-type='local' data-mp3="../Music/Originals-based-on-existing-characters/Widowmaker's-Theme-(Overwatch-Original).mp3")
+								a(class='playlistNonSelected' href='#') Widowmaker's Theme (Overwatch Original)
 
 						//Portfolio Peices
 						ul(id='playlist2' style="display:none;")
@@ -272,6 +293,9 @@ block content
 
 							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Dark-Synthetic-Cave.mp3')
 								a(class='playlistNonSelected' href='#') Dark Synthetic Cave
+
+							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Happy Village.mp3')
+								a(class='playlistNonSelected' href='#') Happy Village
 
 							li(class= 'playlistItem' data-type='local' data-mp3='../Music/Portfolio/Happy-Snow-Town.mp3')
 								a(class='playlistNonSelected' href='#') Happy Snow Town

@@ -94,7 +94,7 @@ var hap_settings = {
 	useAlertMessaging: true,
 
 	/* activatePlaylistScroll: true/false. activate jScrollPane. */
-	activatePlaylistScroll: false,
+	activatePlaylistScroll: true,
 	/* playlistScrollOrientation: vertical/horizontal. */
 	playlistScrollOrientation: 'vertical',
 
@@ -207,7 +207,7 @@ var hap_settings2 = {
 	useAlertMessaging: true,
 
 	/* activatePlaylistScroll: true/false. activate jScrollPane. */
-	activatePlaylistScroll: false,
+	activatePlaylistScroll: true,
 	/* playlistScrollOrientation: vertical/horizontal. */
 	playlistScrollOrientation: 'vertical',
 

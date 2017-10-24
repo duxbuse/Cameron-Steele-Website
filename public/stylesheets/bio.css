@@ -6,3 +6,6 @@
   padding: 10px;
   padding-top: 30px;
 }
+.bio-text p {
+  text-align: left;
+}
