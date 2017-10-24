@@ -101,7 +101,7 @@ var hap_settings = {
 	/* sortablePlaylistItems: true/false. Make playlist items sortable */
 	sortablePlaylistItems: true,
 	/* useRemoveBtnInTracks: true/false. Create remove buttons in playlist items for removing tracks. */
-	useRemoveBtnInTracks: true,
+	useRemoveBtnInTracks: false,
 
 	/* autoReuseMailForDownload: true/false. download backup for ios, save email after client first enters email address and auto send all emails to the same address */
 	autoReuseMailForDownload: true,
@@ -214,7 +214,7 @@ var hap_settings2 = {
 	/* sortablePlaylistItems: true/false. Make playlist items sortable */
 	sortablePlaylistItems: true,
 	/* useRemoveBtnInTracks: true/false. Create remove buttons in playlist items for removing tracks. */
-	useRemoveBtnInTracks: true,
+	useRemoveBtnInTracks: false,
 
 	/* autoReuseMailForDownload: true/false. download backup for ios, save email after client first enters email address and auto send all emails to the same address */
 	autoReuseMailForDownload: true,

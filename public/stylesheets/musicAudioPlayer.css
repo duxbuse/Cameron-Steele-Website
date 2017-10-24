@@ -5,7 +5,7 @@ body {
 
 .audioplayerWrapper{
 	position:relative;
-	min-width:500px;
+	/*min-width:500px;*/
 	min-height:300px;
 }
 
@@ -217,14 +217,14 @@ body {
 /* player progress, serves as hit as well */
 .audioplayerWrapper .player_progress{
 	position:absolute;
-	top:63px;
+	top: calc(20% + 10px);
 	left:20px;
 	/* for hit */
 
 	width:90%;
-	width: -webkit-calc(100% - 40px);
-    width: -moz-calc(100% - 40px);
-    width: calc(100% - 40px);
+	width: -webkit-calc(80% - 60px);
+    width: -moz-calc(80% - 60px);
+    width: calc(80% - 60px);
 
 	height:16px;
 	/*background:green;*/
