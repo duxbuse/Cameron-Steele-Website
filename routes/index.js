@@ -28,6 +28,7 @@ router.get('/contact', function(req, res){
 router.post('/contact', function(req, res){
     const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    console.log(process.env.SENDGRID_API_KEY)
     const msg = {
       to: 'duxbuse@gmail.com',
       from: 'admin@steele-music.com',
@@ -37,6 +38,7 @@ router.post('/contact', function(req, res){
     };
     
     sgMail.send(msg);
+    console.log("Message has been sent")
 });
 
 module.exports = router;
